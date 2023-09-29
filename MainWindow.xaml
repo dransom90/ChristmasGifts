@@ -1,0 +1,44 @@
+﻿<Window x:Class="ChristmasGifts.MainWindow"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:local="clr-namespace:ChristmasGifts"
+		xmlns:ex="http://schemas.xceed.com/wpf/xaml/toolkit"
+		mc:Ignorable="d"
+		Title="MainWindow" Height="450" Width="800">
+	<Window.DataContext>
+		<local:MainViewModel />
+	</Window.DataContext>
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition />
+			<RowDefinition />
+			<RowDefinition />
+			<RowDefinition />
+			<RowDefinition />
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition />
+			<ColumnDefinition />
+			<ColumnDefinition />
+			<ColumnDefinition />
+			<ColumnDefinition />
+		</Grid.ColumnDefinitions>
+		<ex:IntegerUpDown Grid.Row="0" Grid.Column="2" Height="50" Width="100" Minimum="2021" Maximum="2100" Background="Green" FontSize="24" FontWeight="Bold" Foreground="Red" Value="{Binding SelectedYear, Mode=TwoWay}" />
+		<TextBlock Text="DJ" Grid.Row="1" Grid.Column="0" FontSize="64" FontFamily="{StaticResource PWHappyChristmas}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+		<TextBlock Text="AC" Grid.Row="2" Grid.Column="0" FontSize="64" HorizontalAlignment="Center" VerticalAlignment="Center" />
+		<TextBlock Text="TR" Grid.Row="3" Grid.Column="0" FontSize="64" HorizontalAlignment="Center" VerticalAlignment="Center" />
+		<TextBlock Text="JT" Grid.Row="4" Grid.Column="0" FontSize="64" HorizontalAlignment="Center" VerticalAlignment="Center" />
+
+		<TextBlock Text="->" Grid.Row="1" Grid.Column="1" FontSize="64" HorizontalAlignment="Center" VerticalAlignment="Center" />
+		<TextBlock Text="->" Grid.Row="2" Grid.Column="1" FontSize="64" HorizontalAlignment="Center" VerticalAlignment="Center" />
+		<TextBlock Text="->" Grid.Row="3" Grid.Column="1" FontSize="64" HorizontalAlignment="Center" VerticalAlignment="Center" />
+		<TextBlock Text="->" Grid.Row="4" Grid.Column="1" FontSize="64" HorizontalAlignment="Center" VerticalAlignment="Center" />
+
+		<TextBlock Text="{Binding DJ}" Grid.Row="1" Grid.Column="2" FontSize="64" HorizontalAlignment="Center" VerticalAlignment="Center" />
+		<TextBlock Text="{Binding AC}" Grid.Row="2" Grid.Column="2" FontSize="64" HorizontalAlignment="Center" VerticalAlignment="Center" />
+		<TextBlock Text="{Binding TR}" Grid.Row="3" Grid.Column="2" FontSize="64" HorizontalAlignment="Center" VerticalAlignment="Center" />
+		<TextBlock Text="{Binding JT}" Grid.Row="4" Grid.Column="2" FontSize="64" HorizontalAlignment="Center" VerticalAlignment="Center" />
+	</Grid>
+</Window>

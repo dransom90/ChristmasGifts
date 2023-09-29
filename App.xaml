@@ -1,0 +1,9 @@
+﻿<Application x:Class="ChristmasGifts.App"
+			 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:local="clr-namespace:ChristmasGifts"
+			 StartupUri="MainWindow.xaml">
+	<Application.Resources>
+		<FontFamily x:Key="PWHappyChristmas">./Fonts/PWHappyChristmas.ttf#PWHappyChristmas</FontFamily>
+	</Application.Resources>
+</Application>
